@@ -101,7 +101,7 @@ export default function Home() {
               className="absolute top-0 left-0 w-full h-full"
               title="PYQ Organizer Live Demo"
               allow="fullscreen"
-              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
             ></iframe>
           </div>
         </div>
