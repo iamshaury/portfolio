@@ -30,7 +30,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
     await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>", // Use an email from your verified domain
       to: "officialshaury@gmail.com",
-      reply_to: user_email,
+      replyTo: user_email,
       subject: `New message from ${user_name} via portfolio`,
       text: `Name: ${user_name}\nEmail: ${user_email}\n\nMessage:\n${message}`,
     });
