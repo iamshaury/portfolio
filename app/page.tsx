@@ -27,7 +27,7 @@ const ContactModal = dynamic(() =>
   import("./components/contact-modal").then((mod) => mod.ContactModal)
 );
 
-const sectionVariants = {
+const sectionVariants = () => ({
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -37,7 +37,8 @@ const sectionVariants = {
       ease: "easeOut",
     },
   },
-};
+});
+
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -179,7 +180,7 @@ export default function Home() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
+          variants={sectionVariants()}
         >
           <div className=" backdrop-blur-sm">
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
@@ -199,7 +200,7 @@ export default function Home() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          variants={sectionVariants}
+          variants={sectionVariants()}
         >
           <Timeline data={timelineData} />
         </motion.section>
@@ -210,7 +211,7 @@ export default function Home() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          variants={sectionVariants}
+          variants={sectionVariants()}
         >
           <h1 className="text-4xl lg:text-6xl p-2 font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
             Technologies I Work With
@@ -228,7 +229,7 @@ export default function Home() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
+          variants={sectionVariants()}
         >
           <h2 className="text-4xl lg:text-6xl p-4 font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-8 text-center mt-16">
             Professional Background
@@ -255,7 +256,7 @@ export default function Home() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
+          variants={sectionVariants()}
         >
           <h2 className="text-4xl lg:text-6xl p-2 font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-8 text-center">
             Let's Connect
